@@ -1,0 +1,1389 @@
+<!doctype html>
+<html lang="ne">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>नेपाल संसद निर्वाचन — सिट विवरण</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Devanagari:wght@300;400;500;600;700;900&family=IBM+Plex+Mono:wght@400;600&family=Playfair+Display:wght@700;900&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --bg: #faf8f3;
+        --paper: #ffffff;
+        --ink: #1a1410;
+        --muted: #6b6258;
+        --border: #e0d8cc;
+        --red: #c0392b;
+        --red-light: #fdf0ee;
+        --blue: #1a4a7a;
+        --blue-light: #edf3fa;
+        --gold: #b8860b;
+        --gold-light: #fdf8e8;
+        --green: #1e6b3c;
+        --green-light: #edf7f1;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        background: var(--bg);
+        color: var(--ink);
+        font-family: "Noto Sans Devanagari", sans-serif;
+        line-height: 1.7;
+      }
+
+      .header-stripe {
+        height: 6px;
+        background: linear-gradient(90deg, #c0392b 50%, #1a3a6b 50%);
+      }
+
+      header {
+        background: var(--ink);
+      }
+
+      .header-inner {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 32px 24px 28px;
+        display: flex;
+        align-items: flex-start;
+        gap: 20px;
+      }
+
+      .flag-box {
+        font-size: 50px;
+        line-height: 1;
+        flex-shrink: 0;
+      }
+
+      .header-text h1 {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.5rem, 4vw, 2.2rem);
+        font-weight: 900;
+        color: #fff;
+        line-height: 1.15;
+        margin-bottom: 5px;
+      }
+
+      .header-text .sub {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.68rem;
+        color: rgba(255, 255, 255, 0.45);
+        letter-spacing: 2px;
+        text-transform: uppercase;
+      }
+
+      .header-text .sub span {
+        color: #e8c97a;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 40px 24px 80px;
+      }
+
+      .section-label {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.63rem;
+        letter-spacing: 3px;
+        text-transform: uppercase;
+        color: var(--muted);
+        margin-bottom: 14px;
+        display: flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .section-label::after {
+        content: "";
+        flex: 1;
+        height: 1px;
+        background: var(--border);
+      }
+
+      .section-title {
+        font-family: "Playfair Display", serif;
+        font-size: clamp(1.25rem, 3vw, 1.7rem);
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 20px;
+        line-height: 1.2;
+      }
+
+      .block {
+        background: var(--paper);
+        border: 1px solid var(--border);
+        border-radius: 12px;
+        padding: 26px;
+        margin-bottom: 28px;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
+      }
+
+      .stat-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(155px, 1fr));
+        gap: 14px;
+        margin-bottom: 28px;
+      }
+
+      .stat-card {
+        background: var(--paper);
+        border: 1px solid var(--border);
+        border-radius: 10px;
+        padding: 18px 16px;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        position: relative;
+        overflow: hidden;
+      }
+
+      .stat-card::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 3px;
+      }
+
+      .stat-card.red::before {
+        background: var(--red);
+      }
+
+      .stat-card.blue::before {
+        background: var(--blue);
+      }
+
+      .stat-card.gold::before {
+        background: var(--gold);
+      }
+
+      .stat-card.green::before {
+        background: var(--green);
+      }
+
+      .stat-num {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 2rem;
+        font-weight: 600;
+        line-height: 1;
+        margin-bottom: 6px;
+      }
+
+      .stat-card.red .stat-num {
+        color: var(--red);
+      }
+
+      .stat-card.blue .stat-num {
+        color: var(--blue);
+      }
+
+      .stat-card.gold .stat-num {
+        color: var(--gold);
+      }
+
+      .stat-card.green .stat-num {
+        color: var(--green);
+      }
+
+      .stat-label {
+        font-size: 0.82rem;
+        color: var(--muted);
+        font-weight: 500;
+      }
+
+      .stat-sub {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.63rem;
+        color: #bbb;
+        margin-top: 4px;
+      }
+
+      .info-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: baseline;
+        padding: 10px 0;
+        border-bottom: 1px solid var(--border);
+        font-size: 0.9rem;
+        gap: 12px;
+      }
+
+      .info-row:last-child {
+        border-bottom: none;
+      }
+
+      .info-row .key {
+        color: var(--muted);
+      }
+
+      .info-row .val {
+        font-family: "IBM Plex Mono", monospace;
+        font-weight: 600;
+        color: var(--ink);
+        text-align: right;
+      }
+
+      .info-row .val.red {
+        color: var(--red);
+      }
+
+      .info-row .val.blue {
+        color: var(--blue);
+      }
+
+      .info-row .val.gold {
+        color: var(--gold);
+      }
+
+      .highlight-card {
+        background: var(--gold-light);
+        border: 1px solid #e0c96a;
+        border-radius: 10px;
+        padding: 18px 22px;
+        margin-bottom: 20px;
+        display: flex;
+        align-items: center;
+        gap: 18px;
+      }
+
+      .highlight-card .hc-num {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 2.2rem;
+        font-weight: 600;
+        color: var(--gold);
+        flex-shrink: 0;
+        line-height: 1;
+      }
+
+      .highlight-card .hc-label {
+        font-size: 0.92rem;
+        color: var(--ink);
+        font-weight: 600;
+      }
+
+      .highlight-card .hc-sub {
+        font-size: 0.78rem;
+        color: var(--muted);
+        margin-top: 2px;
+      }
+
+      .data-table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 0.87rem;
+      }
+
+      .data-table th {
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.6rem;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: var(--muted);
+        text-align: left;
+        padding: 9px 12px;
+        border-bottom: 2px solid var(--border);
+      }
+
+      .data-table th.r {
+        text-align: right;
+      }
+
+      .data-table td {
+        padding: 9px 12px;
+        border-bottom: 1px solid var(--border);
+        vertical-align: middle;
+      }
+
+      .data-table td.r {
+        text-align: right;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.82rem;
+      }
+
+      .data-table tr:last-child td {
+        border-bottom: none;
+      }
+
+      .data-table tr.total-row td {
+        background: #faf8f3;
+        font-weight: 700;
+        border-top: 2px solid var(--border);
+        border-bottom: none;
+      }
+
+      .data-table tr:not(.total-row):hover td {
+        background: #faf8f3;
+      }
+
+      /* Party badge — supports both image and text symbol */
+      .symbol-badge {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        font-size: 0.65rem;
+        font-weight: 700;
+        color: #fff;
+        margin-right: 10px;
+        flex-shrink: 0;
+        font-family: "IBM Plex Mono", monospace;
+        overflow: hidden;
+      }
+
+      .symbol-badge img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 50%;
+        display: block;
+      }
+
+      .party-cell {
+        display: flex;
+        align-items: center;
+      }
+
+      .pass-badge {
+        display: inline-block;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.62rem;
+        padding: 3px 8px;
+        border-radius: 4px;
+        font-weight: 600;
+      }
+
+      .pass-badge.yes {
+        background: var(--green-light);
+        color: var(--green);
+        border: 1px solid #b2dfc4;
+      }
+
+      .pass-badge.no {
+        background: var(--red-light);
+        color: var(--red);
+        border: 1px solid #f5c1bb;
+      }
+
+      .c-green {
+        color: var(--green);
+        font-weight: 700;
+      }
+
+      .c-red {
+        color: var(--red);
+        font-weight: 700;
+      }
+
+      .c-blue {
+        color: var(--blue);
+        font-weight: 700;
+      }
+
+      .c-gold {
+        color: var(--gold);
+        font-weight: 700;
+      }
+
+      .c-muted {
+        color: var(--muted);
+      }
+
+      .steps-wrap {
+        display: flex;
+        flex-direction: column;
+      }
+
+      .step {
+        display: flex;
+      }
+
+      .step-left {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 50px;
+        flex-shrink: 0;
+      }
+
+      .step-num {
+        width: 34px;
+        height: 34px;
+        border-radius: 50%;
+        background: var(--ink);
+        color: #fff;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.82rem;
+        font-weight: 600;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 1;
+      }
+
+      .step-line {
+        width: 2px;
+        flex: 1;
+        background: var(--border);
+        margin-top: 4px;
+        min-height: 16px;
+      }
+
+      .step:last-child .step-line {
+        display: none;
+      }
+
+      .step-body {
+        padding: 0 0 30px 18px;
+        flex: 1;
+      }
+
+      .step-title {
+        font-family: "Playfair Display", serif;
+        font-size: 1.08rem;
+        font-weight: 700;
+        color: var(--ink);
+        margin-bottom: 8px;
+        margin-top: 5px;
+      }
+
+      .step-desc {
+        font-size: 0.88rem;
+        color: var(--muted);
+        margin-bottom: 14px;
+        line-height: 1.75;
+      }
+
+      .formula-box {
+        background: var(--gold-light);
+        border: 1px solid #e0c96a;
+        border-radius: 8px;
+        padding: 14px 18px;
+        font-family: "IBM Plex Mono", monospace;
+        font-size: 0.82rem;
+        color: var(--ink);
+        margin-bottom: 14px;
+        line-height: 1.9;
+      }
+
+      .formula-box .comment {
+        color: var(--muted);
+        font-size: 0.72rem;
+      }
+
+      .note-box {
+        background: #f5f0e8;
+        border-left: 3px solid var(--gold);
+        border-radius: 0 8px 8px 0;
+        padding: 11px 15px;
+        font-size: 0.83rem;
+        color: var(--muted);
+        margin-top: 12px;
+        line-height: 1.65;
+      }
+
+      .parl-bar {
+        height: 26px;
+        border-radius: 6px;
+        overflow: hidden;
+        display: flex;
+        gap: 1px;
+        margin-bottom: 8px;
+      }
+
+      .bar-seg {
+        height: 100%;
+      }
+
+      .majority-lines {
+        position: relative;
+        height: 32px;
+        margin-bottom: 6px;
+      }
+
+      .maj-line {
+        position: absolute;
+        top: 0;
+        width: 2px;
+        height: 22px;
+        opacity: 0.7;
+      }
+
+      .maj-line-label {
+        position: absolute;
+        top: 22px;
+        font-size: 0.6rem;
+        font-family: "IBM Plex Mono", monospace;
+        transform: translateX(-50%);
+        white-space: nowrap;
+      }
+
+      .parl-legend {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 6px 14px;
+        font-size: 0.77rem;
+        color: var(--muted);
+        margin-top: 6px;
+      }
+
+      .legend-item {
+        display: flex;
+        align-items: center;
+        gap: 6px;
+      }
+
+      .legend-dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 2px;
+        flex-shrink: 0;
+      }
+
+      .majority-box {
+        border-radius: 10px;
+        padding: 16px 20px;
+        margin-top: 18px;
+        display: flex;
+        align-items: flex-start;
+        gap: 14px;
+        font-size: 0.88rem;
+      }
+
+      .majority-box.ok {
+        background: var(--green-light);
+        border: 1px solid #b2dfc4;
+        color: var(--green);
+      }
+
+      .majority-box.warn {
+        background: var(--gold-light);
+        border: 1px solid #e0c96a;
+        color: var(--gold);
+      }
+
+      .majority-box.none {
+        background: var(--red-light);
+        border: 1px solid #f5c1bb;
+        color: var(--red);
+      }
+
+      .majority-box .mj-icon {
+        font-size: 1.4rem;
+        flex-shrink: 0;
+      }
+
+      .majority-box .mj-text strong {
+        display: block;
+        font-weight: 700;
+        margin-bottom: 3px;
+        color: inherit;
+      }
+
+      .fptp-explainer {
+        background: var(--blue-light);
+        border: 1px solid #b8d0ea;
+        border-radius: 10px;
+        padding: 18px 20px;
+        margin-bottom: 16px;
+      }
+
+      .fptp-explainer h4 {
+        font-size: 0.9rem;
+        font-weight: 700;
+        color: var(--blue);
+        margin-bottom: 7px;
+      }
+
+      .fptp-explainer p {
+        font-size: 0.86rem;
+        color: var(--muted);
+        line-height: 1.65;
+      }
+
+      @media (max-width: 640px) {
+        .stat-grid {
+          grid-template-columns: 1fr 1fr;
+        }
+
+        .header-inner {
+          flex-direction: column;
+          gap: 12px;
+        }
+
+        .block {
+          padding: 18px 14px;
+        }
+
+        .step-body {
+          padding: 0 0 22px 12px;
+        }
+
+        .highlight-card {
+          flex-direction: column;
+          gap: 8px;
+        }
+      }
+
+      footer {
+        text-align: center;
+        padding: 28px 24px;
+        font-size: 0.72rem;
+        color: #bbb;
+        border-top: 1px solid var(--border);
+        font-family: "IBM Plex Mono", monospace;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      // ─── ELECTION CONFIG ──────────────────────────────────────────────────────────
+      const CONFIG = {
+        totalSeats: 275, // कुल प्रतिनिधिसभा सिट
+        fptp: 165, // प्रत्यक्ष (FPTP) सिट
+        prSeats: 110, // समानुपातिक (PR) सिट
+        thresholdPct: 3, // PR थ्रेसहोल्ड (%)
+        electionYear: "२०८२", // निर्वाचन वर्ष (string)
+      };
+
+      // ─── PARTIES ──────────────────────────────────────────────────────────────────
+      // name      : दलको पूरा नाम
+      // nameShort : (optional) लामो नाम भएमा table मा छोटो नाम देखाउन
+      // symbol    : Image नभएमा badge मा देखिने text (१–४ अक्षर, fallback)
+      // image     : (optional) चुनाव चिन्हको image path
+      // उदाहरण: image: "images/rsp.jpg";
+      //             — HTML file सँगै 'images' folder राख्नुहोस् र file path दिनुहोस्
+      //             — Image नराखेमा symbol text badge मा देखिन्छ, दुवै काम गर्छ
+      // color     : दलको रंग (hex) — badge border र parliament bar मा प्रयोग हुन्छ
+      // prVotes   : PR मा प्राप्त सदर मत (संख्या)
+      // fptp      : प्रत्यक्ष निर्वाचनमा जितेका सिट (संख्या)
+
+      const PARTIES = [
+        {
+          name: "राष्ट्रिय स्वतन्त्र पार्टी",
+          symbol: "रास्वपा",
+          image: "images/ghanti.jpg",
+          color: "#2980b9",
+          prVotes: 5181330,
+          fptp: 125,
+        },
+        {
+          name: "नेपाली काँग्रेस",
+          symbol: "काँग्रेस",
+          image: "images/rukh.jpg",
+          color: "#27ae60",
+          prVotes: 1758903,
+          fptp: 18,
+        },
+        {
+          name: "नेपाल कम्युनिष्ट पार्टी (एमाले)",
+          symbol: "एमाले",
+          image: "images/surya.jpg",
+          color: "#e74c3c",
+          prVotes: 1455669,
+          fptp: 9,
+        },
+        {
+          name: "नेपाली कम्युनिष्ट पार्टी",
+          symbol: "नेकपा",
+          image: "images/tara.jpg",
+          color: "#8b1a1a",
+          prVotes: 811393,
+          fptp: 8,
+        },
+        {
+          name: "श्रम संस्कृति पार्टी",
+          symbol: "श्रम",
+          image: "images/mato.jpg",
+          color: "#7f8c8d",
+          prVotes: 385852,
+          fptp: 3,
+        },
+        {
+          name: "राष्ट्रिय प्रजातन्त्र पार्टी",
+          symbol: "राप्रपा",
+          image: "images/halo.jpg",
+          color: "#c9a800",
+          prVotes: 330649,
+          fptp: 1,
+        },
+        {
+          name: "जनता समाजवादी पार्टी, नेपाल",
+          symbol: "जसपा",
+          image: "images/chhata.jpg",
+          color: "#16a085",
+          prVotes: 181850,
+          fptp: 0,
+        },
+        {
+          name: "राष्ट्रिय परिवर्तन पार्टी",
+          symbol: "रापपा",
+          image: "images/basuri.jpg",
+          color: "#d35400",
+          prVotes: 172490,
+          fptp: 0,
+        },
+        {
+          name: "जनमत पार्टी",
+          symbol: "जपा",
+          image: "images/mic.png",
+          color: "#8e44ad",
+          prVotes: 79403,
+          fptp: 0,
+        },
+        {
+          name: "एकल चिन्ह चकिया (जाँतो) (राष्ट्रिय मुक्ति पार्टी नेपाल/जनता समाजवादी पार्टी/नागरिक उन्मुक्ति पार्टी, नेपाल)",
+          symbol: "जाँतो",
+          image: "images/jato.jpg",
+          color: "#999",
+          prVotes: 62069,
+          fptp: 0,
+        },
+        {
+          name: "नेपाल मजदुर किसान पार्टी",
+          symbol: "नेमकिपा",
+          image: "images/madal.png",
+          color: "#bbb",
+          prVotes: 42294,
+          fptp: 0,
+        },
+        {
+          name: "राष्ट्र निर्माण दल नेपाल",
+          symbol: "रानिदाने",
+          image: "images/bottle.jpg",
+          color: "#ccc",
+          prVotes: 39557,
+          fptp: 0,
+        },
+        {
+          name: "राष्ट्रिय जनमोर्चा",
+          symbol: "राज",
+          image: "images/gilas.png",
+          color: "#ccc",
+          prVotes: 29453,
+          fptp: 0,
+        },
+        {
+          name: "एकल चिन्ह बस (नेपाल संघीय समाजवादी पार्टी/बहुजन एकता पार्टी नेपाल/नेपाल जनजागृति पार्टी)",
+          symbol: "बस",
+          image: "images/bus.jpg",
+          color: "#ccc",
+          prVotes: 29396,
+          fptp: 0,
+        },
+        {
+          name: "नेपाल जनता संरक्षण पार्टी",
+          symbol: "नेजसपा",
+          image: "images/doko.jpg",
+          color: "#ccc",
+          prVotes: 28408,
+          fptp: 0,
+        },
+        {
+          name: "प्रगतिशील लोकतान्त्रिक पार्टी",
+          symbol: "प्रलोपा",
+          image: "images/aankha.jpg",
+          color: "#ccc",
+          prVotes: 24673,
+          fptp: 0,
+        },
+        {
+          name: "नेपाल कम्युनिस्ट पार्टी (माओवादी)",
+          symbol: "माओवादी",
+          image: "images/gulab.jpg",
+          color: "#ccc",
+          prVotes: 23858,
+          fptp: 0,
+        },
+        {
+          name: "अन्य",
+          symbol: "अन्य",
+          image: "images/swostik.jpg",
+          color: "#ccc",
+          prVotes: 169715,
+          fptp: 0,
+        },
+        {
+          name: "स्वतन्त्र",
+          symbol: "स्वतन्त्र",
+          image: "images/tribhuj.jpg",
+          color: "#636e72",
+          prVotes: 0,
+          fptp: 1,
+        },
+      ];
+
+      // ─── END CONFIG ───────────────────────────────────────────────────────────────
+    </script>
+
+    <!-- Page shell -->
+    <div class="header-stripe"></div>
+    <header>
+      <div class="header-inner">
+        <div class="flag-box">🇳🇵</div>
+        <div class="header-text">
+          <h1>नेपाल संघीय संसद निर्वाचन</h1>
+          <div class="sub">
+            प्रतिनिधिसभा सिट बाँडफाँट — <span id="h-year"></span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="section-label">१ — आधारभूत जानकारी</div>
+      <div class="section-title">संसदको संरचना</div>
+      <div id="stat-grid" class="stat-grid"></div>
+      <div class="block" id="basic-info-rows"></div>
+
+      <div class="section-label">२ — प्रत्यक्ष निर्वाचन (FPTP)</div>
+      <div class="section-title">प्रत्यक्ष निर्वाचन भनेको के हो?</div>
+      <div class="block" id="fptp-block"></div>
+
+      <div class="section-label">३ — समानुपातिक निर्वाचन (PR)</div>
+      <div class="section-title">
+        समानुपातिक सिट कसरी बाँडिन्छ? — चरण-दर-चरण
+      </div>
+      <div class="block" style="margin-bottom: 20px">
+        <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.75">
+          समानुपातिक (PR) मा मतदाताले <strong>दललाई</strong> मत दिन्छन् —
+          व्यक्तिलाई होइन। दलले कति प्रतिशत मत पायो त्यही अनुपातमा सिट पाउँछ। तर
+          प्रक्रिया थोरै जटिल छ — तल चरण-दर-चरण बुझौं।
+        </p>
+      </div>
+      <div class="block" id="pr-votes-block"></div>
+      <div class="steps-wrap" id="pr-steps"></div>
+
+      <div class="section-label">४ — अन्तिम नतिजा</div>
+      <div class="section-title">प्रत्यक्ष + समानुपातिक = कुल संसद सिट</div>
+      <div class="block" id="parl-bar-block"></div>
+      <div class="block" id="final-block"></div>
+    </div>
+
+    <footer id="footer-txt"></footer>
+
+    <!-- =====================================================================
+  RENDER ENGINE — माथिको data पढेर page बनाउँछ, यहाँ edit नगर्नुहोस्
+====================================================================== -->
+    <script>
+      // ── Number → Nepali digits (single reliable function for all rendering) ───────
+      // Converts any number to Nepali numeral string.
+      // decimals=0 means integer (rounds), decimals>0 keeps that many decimal places.
+      const ND = ["०", "१", "२", "३", "४", "५", "६", "७", "८", "९"];
+      function ne(n, decimals) {
+        if (n == null || isNaN(n)) return "—";
+        const d = decimals !== undefined ? decimals : 0;
+        // Format with commas in Indian style, then convert digits to Nepali
+        if (d === 0) {
+          // Use toLocaleString for comma formatting, then swap digits
+          return Math.round(n)
+            .toLocaleString("en-IN")
+            .replace(/[0-9]/g, (c) => ND[+c]);
+        } else {
+          // For decimals (e.g. divisor ratio): no commas needed
+          return n.toFixed(d).replace(/[0-9]/g, (c) => ND[+c]);
+        }
+      }
+      // Percentage with 2 decimal places in Nepali
+      const nePct = (p) => ne(p, 2) + "%";
+
+      const sn = (p) => p.nameShort || p.name;
+      const NE = ["१", "२", "३", "४", "५", "६", "७", "८", "९", "१०"];
+
+      // Party cell: image if p.image set, else colored circle with symbol text
+      function partyCell(p) {
+        let inner;
+        if (p.image) {
+          inner = `<img src="${p.image}" alt="${sn(p)}"
+               onerror="this.outerHTML='<span style=\\'font-size:0.65rem;font-weight:700;\\'>${p.symbol}</span>'">`;
+        } else {
+          inner = `<span style="font-size:0.65rem;font-weight:700;">${p.symbol}</span>`;
+        }
+        return `<div class="party-cell">
+    <span class="symbol-badge" style="background:${p.color};${p.image ? "padding:0;" : ""}">${inner}</span>
+    ${sn(p)}
+  </div>`;
+      }
+
+      // ── Calculations ──────────────────────────────────────────────────────────────
+      const totalSeats = CONFIG.totalSeats;
+      const simpleMaj = Math.floor(totalSeats / 2) + 1;
+      const twoThirds = Math.ceil((totalSeats * 2) / 3);
+      const totalPR = CONFIG.prSeats;
+      const thresh = CONFIG.thresholdPct;
+
+      const totalPRvotes = PARTIES.reduce((s, p) => s + p.prVotes, 0);
+      const threshVotes = (totalPRvotes * thresh) / 100;
+
+      PARTIES.forEach((p) => {
+        p.pct = totalPRvotes > 0 ? (p.prVotes / totalPRvotes) * 100 : 0;
+        p.passes = p.prVotes > 0 && p.pct >= thresh;
+      });
+
+      const eligible = PARTIES.filter((p) => p.passes);
+      const validVotes = eligible.reduce((s, p) => s + p.prVotes, 0);
+      const divisor = validVotes / totalPR;
+
+      eligible.forEach((p) => {
+        const raw = p.prVotes / divisor;
+        p.prFirst = Math.floor(raw);
+        p.remainder = p.prVotes - p.prFirst * divisor;
+        p.prSeats = p.prFirst;
+      });
+      PARTIES.filter((p) => !p.passes).forEach((p) => {
+        p.prFirst = 0;
+        p.remainder = 0;
+        p.prSeats = 0;
+      });
+
+      const firstAlloc = eligible.reduce((s, p) => s + p.prFirst, 0);
+      const remaining = totalPR - firstAlloc;
+      const byRemainder = [...eligible].sort(
+        (a, b) => b.remainder - a.remainder,
+      );
+      byRemainder.forEach((p, i) => {
+        if (i < remaining) p.prSeats += 1;
+      });
+
+      PARTIES.forEach((p) => {
+        p.totalSeats = p.prSeats + p.fptp;
+      });
+      const grandTotal = PARTIES.reduce((s, p) => s + p.totalSeats, 0);
+      const sorted = [...PARTIES].sort((a, b) => b.totalSeats - a.totalSeats);
+      const topParty = sorted[0];
+      const eligSorted = [...eligible].sort((a, b) => b.prVotes - a.prVotes);
+      const prRawSorted = [...PARTIES]
+        .filter((p) => p.prVotes > 0)
+        .sort((a, b) => b.prVotes - a.prVotes);
+
+      const ineligibleCount = PARTIES.filter(
+        (p) => p.prVotes > 0 && !p.passes,
+      ).length;
+
+      // ── §0 Header ─────────────────────────────────────────────────────────────────
+      document.getElementById("h-year").textContent =
+        CONFIG.electionYear + " को निर्वाचन";
+      document.getElementById("footer-txt").textContent =
+        "नेपाल संसद निर्वाचन सिट विवरण — " +
+        CONFIG.electionYear +
+        "  |  FPTP + PR मिश्रित प्रणाली";
+
+      // ── §1 Basic info ─────────────────────────────────────────────────────────────
+      document.getElementById("stat-grid").innerHTML = `
+  <div class="stat-card red">
+    <div class="stat-num">${ne(totalSeats)}</div>
+    <div class="stat-label">कुल प्रतिनिधिसभा सिट</div>
+    <div class="stat-sub">House of Representatives</div>
+  </div>
+  <div class="stat-card blue">
+    <div class="stat-num">${ne(CONFIG.fptp)}</div>
+    <div class="stat-label">प्रत्यक्ष सिट (FPTP)</div>
+    <div class="stat-sub">First-Past-The-Post</div>
+  </div>
+  <div class="stat-card gold">
+    <div class="stat-num">${ne(totalPR)}</div>
+    <div class="stat-label">समानुपातिक सिट (PR)</div>
+    <div class="stat-sub">Proportional Representation</div>
+  </div>
+  <div class="stat-card green">
+    <div class="stat-num">${ne(thresh)}%</div>
+    <div class="stat-label">PR थ्रेसहोल्ड</div>
+    <div class="stat-sub">न्यूनतम मत प्रतिशत</div>
+  </div>`;
+
+      document.getElementById("basic-info-rows").innerHTML = `
+  <div class="info-row">
+    <span class="key">साधारण बहुमत चाहिने</span>
+    <span class="val blue">${ne(simpleMaj)} सिट &nbsp;(⌊${ne(totalSeats)}÷२⌋ + १)</span>
+  </div>
+  <div class="info-row">
+    <span class="key">दुई तिहाइ बहुमत चाहिने</span>
+    <span class="val red">${ne(twoThirds)} सिट &nbsp;(⌈${ne(totalSeats)} × २/३⌉)</span>
+  </div>
+  <div class="info-row">
+    <span class="key">कुल PR मत गणना (सदर)</span>
+    <span class="val">${ne(totalPRvotes)}</span>
+  </div>
+  <div class="info-row">
+    <span class="key">PR थ्रेसहोल्ड मत (${ne(thresh)}%)</span>
+    <span class="val gold">${ne(threshVotes)} मत</span>
+  </div>
+  <div class="info-row">
+    <span class="key">निर्वाचन प्रणाली</span>
+    <span class="val">मिश्रित प्रणाली (FPTP + PR)</span>
+  </div>`;
+
+      // ── §2 FPTP ───────────────────────────────────────────────────────────────────
+      const fptpRows = PARTIES.filter((p) => p.fptp > 0).sort(
+        (a, b) => b.fptp - a.fptp,
+      );
+      const fptpTotal = fptpRows.reduce((s, p) => s + p.fptp, 0);
+
+      document.getElementById("fptp-block").innerHTML = `
+  <div class="fptp-explainer">
+    <h4>📍 एक क्षेत्र — एक विजेता</h4>
+    <p>
+      नेपाललाई <strong>${ne(CONFIG.fptp)} निर्वाचन क्षेत्र</strong>मा विभाजन गरिएको छ।
+      प्रत्येक क्षेत्रमा उम्मेदवारहरूले प्रतिस्पर्धा गर्छन्।
+      जुन उम्मेदवारले <strong>सबैभन्दा बढी मत</strong> पाउँछ — उही जित्छ।
+      बहुमत चाहिँदैन, मात्र अरू सबैभन्दा बढी मत पाए पुग्छ।
+      यसलाई अंग्रेजीमा <strong>First-Past-The-Post (FPTP)</strong> भनिन्छ।
+    </p>
+  </div>
+  <p style="font-size:0.88rem;color:var(--muted);margin-bottom:18px;line-height:1.75;">
+    यस प्रणालीमा मतदाताले <strong>आफ्नो क्षेत्रको उम्मेदवारलाई</strong> मत दिन्छन् —
+    दलको चिन्ह होइन, व्यक्तिलाई।
+    विजयी उम्मेदवारले त्यो क्षेत्रको प्रत्यक्ष सिट जित्छन्।
+  </p>
+  <div class="section-label" style="margin-bottom:12px;">प्रत्यक्ष निर्वाचन नतिजा</div>
+  <table class="data-table">
+    <thead><tr><th>दल</th><th class="r">प्रत्यक्ष सिट</th></tr></thead>
+    <tbody>
+      ${fptpRows
+        .map(
+          (p) => `
+        <tr>
+          <td>${partyCell(p)}</td>
+          <td class="r c-blue" style="font-weight:700">${ne(p.fptp)}</td>
+        </tr>`,
+        )
+        .join("")}
+      <tr class="total-row">
+        <td>जम्मा</td>
+        <td class="r c-red">${ne(fptpTotal)}</td>
+      </tr>
+    </tbody>
+  </table>`;
+
+      // ── §3 PR raw votes ───────────────────────────────────────────────────────────
+      document.getElementById("pr-votes-block").innerHTML = `
+  <div class="highlight-card">
+    <div class="hc-num">${ne(totalPRvotes)}</div>
+    <div>
+      <div class="hc-label">कुल PR मत गणना (सदर)</div>
+      <div class="hc-sub">समानुपातिक मतमा परेका सबै सदर मतहरूको जोड</div>
+    </div>
+  </div>
+  <div class="section-label" style="margin-bottom:12px;">PR मतदानको नतिजा</div>
+  <table class="data-table">
+    <thead><tr><th>दल</th><th class="r">प्राप्त मत</th></tr></thead>
+    <tbody>
+      ${prRawSorted
+        .map(
+          (p) => `
+        <tr>
+          <td>${partyCell(p)}</td>
+          <td class="r">${ne(p.prVotes)}</td>
+        </tr>`,
+        )
+        .join("")}
+      <tr class="total-row">
+        <td>जम्मा</td>
+        <td class="r">${ne(totalPRvotes)}</td>
+      </tr>
+    </tbody>
+  </table>`;
+
+      // ── §3 Steps ──────────────────────────────────────────────────────────────────
+
+      const step1Body = `
+  <div class="formula-box">
+    थ्रेसहोल्ड मत = कुल मत × ${ne(thresh)}%<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= ${ne(totalPRvotes)} × ${ne(thresh)}%<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <strong>${ne(threshVotes)} मत</strong>
+    <br><span class="comment">— यो भन्दा कम मत पाएका दलले PR सिट पाउँदैनन्</span>
+  </div>
+  <table class="data-table">
+    <thead><tr>
+      <th>दल</th>
+      <th class="r">प्राप्त मत</th>
+      <th class="r">% (कुल मतको)</th>
+      <th class="r">थ्रेसहोल्ड (${ne(thresh)}%)</th>
+    </tr></thead>
+    <tbody>
+      ${prRawSorted
+        .map(
+          (p) => `
+        <tr>
+          <td>${partyCell(p)}</td>
+          <td class="r">${ne(p.prVotes)}</td>
+          <td class="r ${p.passes ? "c-green" : "c-red"}">${nePct(p.pct)}</td>
+          <td class="r">
+            <span class="pass-badge ${p.passes ? "yes" : "no"}">${p.passes ? "✓ पास" : "✗ फेल"}</span>
+          </td>
+        </tr>`,
+        )
+        .join("")}
+    </tbody>
+  </table>
+  <div class="note-box">
+    ✅ थ्रेसहोल्ड पार गर्ने: <strong>${ne(eligible.length)} दल</strong> &nbsp;|&nbsp;
+    ❌ बाहिरिएका: <strong>${ne(ineligibleCount)} दल + अन्य(साना दलहरू)</strong>
+    — तिनले कुनै PR सिट पाउँदैनन्
+  </div>`;
+
+      const step2Body = `
+  <div class="formula-box">
+    प्रभावी मत = थ्रेसहोल्ड पार गर्ने दलहरूको मतको जोड<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= ${ne(validVotes)}<br><br>
+    भाजक = प्रभावी मत ÷ कुल PR सिट<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= ${ne(validVotes)} ÷ ${ne(totalPR)}<br>
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;= <strong>${ne(divisor)} मत प्रति सिट</strong>
+    <br><span class="comment">— अर्थात् एउटा PR सिट जित्न लगभग यति मत चाहिन्छ</span>
+  </div>
+  <div class="note-box">
+    💡 भाजक ठूलो भयो भने थोरै सिट बाँडिन्छ, सानो भयो भने बढी बाँडिन्छ।
+    कुल ${ne(totalPR)} सिट नै रहने गरी भाजक निकालिन्छ।
+  </div>`;
+
+      const step3Body = `
+  <div class="formula-box">
+    दलको पहिलो सिट = ⌊ दलको मत ÷ भाजक ⌋<br>
+    <span class="comment">⌊ ⌋ = तल गोलाकार (floor) — दशमलव काटेर पूर्णांक मात्र लिन्छौं</span>
+  </div>
+  <table class="data-table">
+    <thead><tr>
+      <th>दल</th>
+      <th class="r">मत</th>
+      <th class="r">÷ भाजक</th>
+      <th class="r">पहिलो सिट</th>
+      <th class="r">बाँकी मत</th>
+    </tr></thead>
+    <tbody>
+      ${eligSorted
+        .map((p) => {
+          const raw = p.prVotes / divisor;
+          return `<tr>
+          <td>${partyCell(p)}</td>
+          <td class="r">${ne(p.prVotes)}</td>
+          <td class="r c-muted">${ne(raw, 3)}</td>
+          <td class="r c-blue" style="font-weight:700">${ne(p.prFirst)}</td>
+          <td class="r">${ne(p.remainder)}</td>
+        </tr>`;
+        })
+        .join("")}
+      <tr class="total-row">
+        <td>जम्मा</td><td class="r">—</td><td class="r">—</td>
+        <td class="r c-blue">${ne(firstAlloc)}</td>
+        <td class="r c-red" style="font-size:0.78rem">${ne(remaining)} सिट बाँकी</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="note-box">
+    पहिलो चरणमा <strong>${ne(firstAlloc)} सिट</strong> बाँडियो।
+    कुल ${ne(totalPR)} मध्ये अझै <strong>${ne(remaining)} सिट बाँकी</strong> छ।
+  </div>`;
+
+      const step4Body = `
+  <div class="formula-box">
+    बाँकी मत = दलको मत − (पहिलो सिट × भाजक)<br>
+    <span class="comment">बाँकी मत घट्दो क्रममा राखी माथिबाट ${ne(remaining)} दललाई एक-एक सिट थपिन्छ</span>
+  </div>
+  <table class="data-table">
+    <thead><tr>
+      <th>क्रम</th><th>दल</th>
+      <th class="r">बाँकी मत</th>
+      <th class="r">थपिने सिट</th>
+    </tr></thead>
+    <tbody>
+      ${byRemainder
+        .map(
+          (p, i) => `
+        <tr>
+          <td class="c-muted" style="font-family:'IBM Plex Mono',monospace;font-size:0.8rem">${ne(i + 1)}</td>
+          <td>${partyCell(p)}</td>
+          <td class="r">${ne(p.remainder)}</td>
+          <td class="r">${
+            i < remaining
+              ? '<span class="c-green"><strong>+१ ✓</strong></span>'
+              : '<span class="c-muted">—</span>'
+          }</td>
+        </tr>`,
+        )
+        .join("")}
+    </tbody>
+  </table>
+  <div class="note-box">
+    बाँकी ${ne(remaining)} सिट → ${byRemainder
+      .slice(0, remaining)
+      .map((p) => `<strong>${sn(p)}</strong>`)
+      .join(", ")}ले पाए।
+  </div>`;
+
+      const step5Body = `
+  <table class="data-table">
+    <thead><tr>
+      <th>दल</th>
+      <th class="r">पहिलो चरण</th>
+      <th class="r">बाँकीबाट</th>
+      <th class="r">कुल PR सिट</th>
+    </tr></thead>
+    <tbody>
+      ${eligSorted
+        .map((p) => {
+          const extra = p.prSeats - p.prFirst;
+          return `<tr>
+          <td>${partyCell(p)}</td>
+          <td class="r">${ne(p.prFirst)}</td>
+          <td class="r ${extra > 0 ? "c-green" : "c-muted"}">${extra > 0 ? "+" + ne(extra) + " ✓" : "—"}</td>
+          <td class="r c-blue" style="font-weight:700">${ne(p.prSeats)}</td>
+        </tr>`;
+        })
+        .join("")}
+      <tr class="total-row">
+        <td>जम्मा</td>
+        <td class="r">${ne(firstAlloc)}</td>
+        <td class="r c-green">+${ne(remaining)}</td>
+        <td class="r c-red">${ne(totalPR)}</td>
+      </tr>
+    </tbody>
+  </table>`;
+
+      const STEPS = [
+        {
+          title: "थ्रेसहोल्ड जाँच — कुन दल योग्य छ?",
+          desc: `PR सिट पाउन दलले कुल सदर मतको <strong>कम्तीमा ${ne(thresh)}%</strong> पाउनैपर्छ।
+            यो न्यूनतम सीमा पार नगरेका दलहरू PR बाट <strong>स्वतः बाहिर</strong> हुन्छन्
+            — चाहे तिनले प्रत्यक्षमा जितेका भए पनि।`,
+          body: step1Body,
+        },
+        {
+          title: "प्रभावी मत र भाजक निकाल्ने",
+          desc: `थ्रेसहोल्ड पार गर्ने दलहरूको मात्र मत जोड्छौं — यही हो <strong>प्रभावी मत</strong>।
+            त्यसपछि यो प्रभावी मतलाई कुल PR सिट (${ne(totalPR)}) ले भाग गरेर <strong>भाजक</strong> निकाल्छौं।
+            भाजकले बताउँछ — एउटा PR सिट जित्न कति मत चाहिन्छ।`,
+          body: step2Body,
+        },
+        {
+          title: "पहिलो चरणको सिट बाँडफाँट",
+          desc: `प्रत्येक दलको मतलाई भाजकले भाग गर्छौं।
+            आउने संख्याको <strong>पूर्णांक मात्र</strong> लिन्छौं (दशमलव फाल्छौं)।
+            यो हो पहिलो चरणको सिट।`,
+          body: step3Body,
+        },
+        {
+          title: 'बाँकी सिट — "सबैभन्दा ठूलो बाँकी मत" विधि',
+          desc: `पहिलो चरणमा दशमलव काटिएर केही मत बाँकी रह्यो।
+            बाँकी सिट त्यही <strong>"बाँकी मत" (remainder)</strong>को आधारमा दिइन्छ —
+            जसको बाँकी मत सबैभन्दा बढी, उसले पहिले पाउँछ।`,
+          body: step4Body,
+        },
+        {
+          title: "अन्तिम PR सिट सारांश",
+          desc: `पहिलो चरण + बाँकी सिट जोड्दा प्रत्येक दलको कुल PR सिट निस्कन्छ।`,
+          body: step5Body,
+        },
+      ];
+
+      document.getElementById("pr-steps").innerHTML = STEPS.map(
+        (s, i) => `
+  <div class="step">
+    <div class="step-left">
+      <div class="step-num">${NE[i]}</div>
+      <div class="step-line"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-title">${s.title}</div>
+      <div class="step-desc">${s.desc}</div>
+      ${s.body}
+    </div>
+  </div>`,
+      ).join("");
+
+      // ── §4 Parliament bar ─────────────────────────────────────────────────────────
+      const barSegs = sorted
+        .filter((p) => p.totalSeats > 0)
+        .map(
+          (p) =>
+            `<div class="bar-seg" style="flex:${p.totalSeats};background:${p.color}"
+    title="${sn(p)}: ${ne(p.totalSeats)} सिट"></div>`,
+        )
+        .join("");
+
+      const simplePct = ((simpleMaj / grandTotal) * 100).toFixed(4);
+      const twoThrdPct = ((twoThirds / grandTotal) * 100).toFixed(4);
+
+      document.getElementById("parl-bar-block").innerHTML = `
+  <div class="section-label" style="margin-bottom:10px;">संसदको दृश्य चित्र (${ne(grandTotal)} सिट)</div>
+  <div class="parl-bar">${barSegs}</div>
+  <div class="majority-lines">
+    <div class="maj-line" style="left:${simplePct}%;background:var(--blue)"></div>
+    <div class="maj-line-label" style="left:${simplePct}%;color:var(--blue)">↑ साधारण (${ne(simpleMaj)})</div>
+    <div class="maj-line" style="left:${twoThrdPct}%;background:var(--red)"></div>
+    <div class="maj-line-label" style="left:${twoThrdPct}%;color:var(--red)">↑ दुईतिहाइ (${ne(twoThirds)})</div>
+  </div>
+  <div class="parl-legend">
+    ${sorted
+      .filter((p) => p.totalSeats > 0)
+      .map(
+        (p) =>
+          `<div class="legend-item">
+         <div class="legend-dot" style="background:${p.color}"></div>
+         ${sn(p)} (${ne(p.totalSeats)})
+       </div>`,
+      )
+      .join("")}
+  </div>`;
+
+      // ── §4 Final table + majority result ─────────────────────────────────────────
+      const hasTwoThirds = topParty.totalSeats >= twoThirds;
+      const hasMajority = topParty.totalSeats >= simpleMaj;
+      const majClass = hasTwoThirds ? "ok" : hasMajority ? "warn" : "none";
+      const majIcon = hasTwoThirds ? "🏆" : hasMajority ? "⚡" : "⚠️";
+      const majText = hasTwoThirds
+        ? `<strong>${sn(topParty)}सँग दुई तिहाइ बहुमत!</strong>
+     ${ne(topParty.totalSeats)} सिट प्राप्त — दुई तिहाइका लागि चाहिने ${ne(twoThirds)} भन्दा
+     ${ne(topParty.totalSeats - twoThirds)} सिट बढी। एक्लैले सरकार बनाउन सक्छ।`
+        : hasMajority
+          ? `<strong>${sn(topParty)}सँग साधारण बहुमत छ।</strong>
+     ${ne(topParty.totalSeats)} सिट प्राप्त। दुई तिहाइका लागि अझै ${ne(twoThirds - topParty.totalSeats)} सिट कम।`
+          : `<strong>कुनै पनि दलसँग स्पष्ट बहुमत छैन।</strong>
+     सबैभन्दा ठूलो: ${sn(topParty)} (${ne(topParty.totalSeats)} सिट)।
+     साधारण बहुमत चाहिने: ${ne(simpleMaj)} सिट।`;
+
+      document.getElementById("final-block").innerHTML = `
+  <table class="data-table">
+    <thead><tr>
+      <th>दल</th>
+      <th class="r">प्रत्यक्ष (FPTP)</th>
+      <th class="r">समानुपातिक (PR)</th>
+      <th class="r">कुल सिट</th>
+    </tr></thead>
+    <tbody>
+      ${sorted
+        .filter((p) => p.totalSeats > 0)
+        .map(
+          (p) => `
+        <tr>
+          <td>${partyCell(p)}</td>
+          <td class="r">${p.fptp > 0 ? ne(p.fptp) : "—"}</td>
+          <td class="r">${p.prSeats > 0 ? ne(p.prSeats) : "—"}</td>
+          <td class="r c-blue" style="font-weight:700">${ne(p.totalSeats)}</td>
+        </tr>`,
+        )
+        .join("")}
+      <tr class="total-row">
+        <td>जम्मा</td>
+        <td class="r">${ne(CONFIG.fptp)}</td>
+        <td class="r">${ne(totalPR)}</td>
+        <td class="r c-red">${ne(grandTotal)}</td>
+      </tr>
+    </tbody>
+  </table>
+  <div class="majority-box ${majClass}">
+    <div class="mj-icon">${majIcon}</div>
+    <div class="mj-text">${majText}</div>
+  </div>`;
+    </script>
+  </body>
+</html>
