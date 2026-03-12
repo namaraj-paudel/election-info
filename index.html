@@ -1,62 +1,61 @@
 <!doctype html>
 <html lang="ne">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>नेपाल संसद निर्वाचन — सिट विवरण</title>
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>नेपाल संसद निर्वाचन — सिट विवरण</title>
-  <link rel="stylesheet" href="css/style.css">
-</head>
-
-<body>
-  <script src="js/config.js"></script>
-  <!-- Page shell -->
-  <div class="header-stripe"></div>
-  <header>
-    <div class="header-inner">
-      <div class="flag-box">🇳🇵</div>
-      <div class="header-text">
-        <h1>नेपाल संघीय संसद निर्वाचन</h1>
-        <div class="sub">
-          प्रतिनिधिसभा सिट बाँडफाँट — <span id="h-year"></span>
+  <body>
+    <script src="js/config.js"></script>
+    <!-- Page shell -->
+    <div class="header-stripe"></div>
+    <header>
+      <div class="header-inner">
+        <div class="flag-box">🇳🇵</div>
+        <div class="header-text">
+          <h1>नेपाल संघीय संसद निर्वाचन</h1>
+          <div class="sub">
+            प्रतिनिधिसभा सिट बाँडफाँट — <span id="h-year"></span>
+          </div>
         </div>
       </div>
+    </header>
+
+    <div class="container">
+      <div class="section-label">१ — आधारभूत जानकारी</div>
+      <div class="section-title">संसदको संरचना</div>
+      <div id="stat-grid" class="stat-grid"></div>
+      <div class="block" id="basic-info-rows"></div>
+
+      <div class="section-label">२ — प्रत्यक्ष निर्वाचन (FPTP)</div>
+      <div class="section-title">प्रत्यक्ष निर्वाचन भनेको के हो?</div>
+      <div class="block" id="fptp-block"></div>
+
+      <div class="section-label">३ — समानुपातिक निर्वाचन (PR)</div>
+      <div class="section-title">
+        समानुपातिक सिट कसरी बाँडिन्छ? — Step-by-Step
+      </div>
+      <div class="block" style="margin-bottom: 20px">
+        <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.75">
+          समानुपातिक (PR) मा मतदाताले <strong>दललाई</strong> मत दिन्छन् —
+          व्यक्तिलाई होइन। दलले कति प्रतिशत मत पायो त्यही अनुपातमा सिट पाउँछ। तर
+          प्रक्रिया थोरै जटिल छ — तल Step-by-Step बुझौं।
+        </p>
+        \
+      </div>
+      <div class="block" id="pr-votes-block"></div>
+      <div class="steps-wrap" id="pr-steps"></div>
+
+      <div class="section-label">४ — अन्तिम नतिजा</div>
+      <div class="section-title">प्रत्यक्ष + समानुपातिक = कुल संसद सिट</div>
+      <div class="block" id="parl-bar-block"></div>
+      <div class="block" id="final-block"></div>
     </div>
-  </header>
 
-  <div class="container">
-    <div class="section-label">१ — आधारभूत जानकारी</div>
-    <div class="section-title">संसदको संरचना</div>
-    <div id="stat-grid" class="stat-grid"></div>
-    <div class="block" id="basic-info-rows"></div>
+    <footer id="footer-txt"></footer>
 
-    <div class="section-label">२ — प्रत्यक्ष निर्वाचन (FPTP)</div>
-    <div class="section-title">प्रत्यक्ष निर्वाचन भनेको के हो?</div>
-    <div class="block" id="fptp-block"></div>
-
-    <div class="section-label">३ — समानुपातिक निर्वाचन (PR)</div>
-    <div class="section-title">
-      समानुपातिक सिट कसरी बाँडिन्छ? — चरण-दर-चरण
-    </div>
-    <div class="block" style="margin-bottom: 20px">
-      <p style="font-size: 0.9rem; color: var(--muted); line-height: 1.75">
-        समानुपातिक (PR) मा मतदाताले <strong>दललाई</strong> मत दिन्छन् —
-        व्यक्तिलाई होइन। दलले कति प्रतिशत मत पायो त्यही अनुपातमा सिट पाउँछ। तर
-        प्रक्रिया थोरै जटिल छ — तल चरण-दर-चरण बुझौं।
-      </p>
-    </div>
-    <div class="block" id="pr-votes-block"></div>
-    <div class="steps-wrap" id="pr-steps"></div>
-
-    <div class="section-label">४ — अन्तिम नतिजा</div>
-    <div class="section-title">प्रत्यक्ष + समानुपातिक = कुल संसद सिट</div>
-    <div class="block" id="parl-bar-block"></div>
-    <div class="block" id="final-block"></div>
-  </div>
-
-  <footer id="footer-txt"></footer>
-
-  <script src="js/script.js"></script>
-</body>
-
+    <script src="js/script.js"></script>
+  </body>
 </html>

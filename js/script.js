@@ -285,7 +285,7 @@ const step3Body = `
     <div class="f-tbl">
       <div class="f-row"><div class="f-lhs">दलको पहिलो सिट</div><div class="f-op">=</div><div class="f-rhs">⌊ दलको मत ÷ भाजक ⌋</div></div>
     </div>
-    <span class="comment">⌊ ⌋ = तल गोलाकार (floor) — दशमलव काटेर पूर्णांक मात्र लिन्छौं</span>
+    <span class="comment">दशमलव काटेर पूर्णांक मात्र लिन्छौं</span>
   </div>
   <div class="table-wrap wide">
   <table class="data-table">
@@ -488,8 +488,8 @@ const majText = hasTwoThirds
      ${ne(topParty.totalSeats)} सिट प्राप्त — दुई तिहाइका लागि चाहिने ${ne(twoThirds)} भन्दा
      ${ne(topParty.totalSeats - twoThirds)} सिट बढी। एक्लैले सरकार बनाउन सक्छ।`
     : hasMajority
-        ? `<strong>${sn(topParty)}सँग साधारण बहुमत छ।</strong>
-     ${ne(topParty.totalSeats)} सिट प्राप्त। दुई तिहाइका लागि अझै ${ne(twoThirds - topParty.totalSeats)} सिट कम।`
+        ? `<strong>${sn(topParty)}ले ${ne(topParty.totalSeats)} सिट प्राप्त गरि साधारण बहुमत पाएको छ।</strong>
+      दुई तिहाइका लागि ${ne(twoThirds - topParty.totalSeats)} सिटले पुगेन।`
         : `<strong>कुनै पनि दलसँग स्पष्ट बहुमत छैन।</strong>
      सबैभन्दा ठूलो: ${sn(topParty)} (${ne(topParty.totalSeats)} सिट)।
      साधारण बहुमत चाहिने: ${ne(simpleMaj)} सिट।`;
