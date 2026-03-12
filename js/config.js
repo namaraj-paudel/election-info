@@ -1,20 +1,12 @@
-// ─── ELECTION CONFIG ──────────────────────────────────────────────────────────
+
 const CONFIG = {
-    totalSeats: 275, // कुल प्रतिनिधिसभा सिट
-    fptp: 165, // प्रत्यक्ष (FPTP) सिट
-    prSeats: 110, // समानुपातिक (PR) सिट
-    thresholdPct: 3, // PR थ्रेसहोल्ड (%)
-    electionYear: "२०८२", // निर्वाचन वर्ष (string)
+    totalSeats: 275,
+    fptp: 165,
+    prSeats: 110,
+    thresholdPct: 3,
+    electionYear: "२०८२",
 };
 
-// ─── PARTIES ──────────────────────────────────────────────────────────────────
-// name      : दलको पूरा नाम
-// nameShort : (optional) लामो नाम भएमा table मा छोटो नाम देखाउन
-// symbol    : Image नभएमा badge मा देखिने text (१–४ अक्षर, fallback)
-// image     : (optional) चुनाव चिन्हको image path
-// color     : दलको रंग (hex) — badge border र parliament bar मा प्रयोग हुन्छ
-// prVotes   : PR मा प्राप्त सदर मत (संख्या)
-// fptp      : प्रत्यक्ष निर्वाचनमा जितेका सिट (संख्या)
 
 const PARTIES = [
     {
@@ -170,5 +162,3 @@ const PARTIES = [
         fptp: 1,
     },
 ];
-
-// ─── END CONFIG ───────────────────────────────────────────────────────────────
