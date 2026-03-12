@@ -22,7 +22,7 @@ const PARTIES = [
         symbol: "रास्वपा",
         image: "images/ghanti.jpg",
         color: "#2980b9",
-        prVotes: 5181330,
+        prVotes: 5183493,
         fptp: 125,
     },
     {
@@ -30,7 +30,7 @@ const PARTIES = [
         symbol: "काँग्रेस",
         image: "images/rukh.jpg",
         color: "#27ae60",
-        prVotes: 1758903,
+        prVotes: 1759172,
         fptp: 18,
     },
     {
@@ -38,7 +38,7 @@ const PARTIES = [
         symbol: "एमाले",
         image: "images/surya.jpg",
         color: "#e74c3c",
-        prVotes: 1455669,
+        prVotes: 1455885,
         fptp: 9,
     },
     {
@@ -46,7 +46,7 @@ const PARTIES = [
         symbol: "नेकपा",
         image: "images/tara.jpg",
         color: "#8b1a1a",
-        prVotes: 811393,
+        prVotes: 811577,
         fptp: 8,
     },
     {
@@ -54,7 +54,7 @@ const PARTIES = [
         symbol: "श्रम",
         image: "images/mato.jpg",
         color: "#7f8c8d",
-        prVotes: 385852,
+        prVotes: 385856,
         fptp: 3,
     },
     {
@@ -62,7 +62,7 @@ const PARTIES = [
         symbol: "राप्रपा",
         image: "images/halo.jpg",
         color: "#c9a800",
-        prVotes: 330649,
+        prVotes: 330684,
         fptp: 1,
     },
     {
@@ -70,7 +70,7 @@ const PARTIES = [
         symbol: "जसपा",
         image: "images/chhata.jpg",
         color: "#16a085",
-        prVotes: 181850,
+        prVotes: 182285,
         fptp: 0,
     },
     {
@@ -78,7 +78,7 @@ const PARTIES = [
         symbol: "रापपा",
         image: "images/basuri.jpg",
         color: "#d35400",
-        prVotes: 172490,
+        prVotes: 172493,
         fptp: 0,
     },
     {
@@ -86,7 +86,7 @@ const PARTIES = [
         symbol: "जपा",
         image: "images/mic.png",
         color: "#8e44ad",
-        prVotes: 79403,
+        prVotes: 79435,
         fptp: 0,
     },
     {
@@ -102,7 +102,7 @@ const PARTIES = [
         symbol: "नेमकिपा",
         image: "images/madal.png",
         color: "#bbb",
-        prVotes: 42294,
+        prVotes: 42301,
         fptp: 0,
     },
     {
@@ -110,7 +110,7 @@ const PARTIES = [
         symbol: "रानिदाने",
         image: "images/bottle.jpg",
         color: "#ccc",
-        prVotes: 39557,
+        prVotes: 39577,
         fptp: 0,
     },
     {
@@ -118,7 +118,7 @@ const PARTIES = [
         symbol: "राज",
         image: "images/gilas.png",
         color: "#ccc",
-        prVotes: 29453,
+        prVotes: 29455,
         fptp: 0,
     },
     {
@@ -126,7 +126,7 @@ const PARTIES = [
         symbol: "बस",
         image: "images/bus.jpg",
         color: "#ccc",
-        prVotes: 29396,
+        prVotes: 29436,
         fptp: 0,
     },
     {
@@ -134,7 +134,7 @@ const PARTIES = [
         symbol: "नेजसपा",
         image: "images/doko.jpg",
         color: "#ccc",
-        prVotes: 28408,
+        prVotes: 28424,
         fptp: 0,
     },
     {
@@ -142,7 +142,7 @@ const PARTIES = [
         symbol: "प्रलोपा",
         image: "images/aankha.jpg",
         color: "#ccc",
-        prVotes: 24673,
+        prVotes: 24675,
         fptp: 0,
     },
     {
@@ -150,7 +150,7 @@ const PARTIES = [
         symbol: "माओवादी",
         image: "images/gulab.jpg",
         color: "#ccc",
-        prVotes: 23858,
+        prVotes: 23864,
         fptp: 0,
     },
     {
@@ -158,7 +158,7 @@ const PARTIES = [
         symbol: "अन्य",
         image: "images/swostik.jpg",
         color: "#ccc",
-        prVotes: 169715,
+        prVotes: 194346,
         fptp: 0,
     },
     {
